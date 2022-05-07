@@ -2,7 +2,6 @@ import os
 import sys
 from PIL import Image
 
-
 def img2pdf(path):
     if os.path.isabs(path):
         img = Image.open(path)
@@ -11,6 +10,7 @@ def img2pdf(path):
     img_pdf = img.convert("RGB")
     root, ext = os.path.splitext(path)
     img_pdf.save(root+".pdf")
+
 
 
 if __name__ == '__main__':
